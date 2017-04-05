@@ -177,7 +177,6 @@ def read_brik(fname,header):
         raise ValueError("Error reading BRIK file, file size is %i but I expected to read %i voxels."%(fsize,n))
 
     
-    # TODO: Take care of scaling here
     V = np.fromfile(fname, dtype=np.dtype(dt),count=n)
     
     #V = fread(fidBRIK, n) , [Opt.OutPrecision,typestr]);
@@ -188,6 +187,22 @@ def read_brik(fname,header):
     #                   have at least 2 points!
     # I think this corresponds to what Numpy calls Fortran-style ordering.
     V = np.reshape( V, (nx,ny,nz,ntp), order="F" )
+
+    
+    # Potentially we need to apply factors to the data (but be careful of overflows!)
+    ff = header.get("BRICK_FLOAT_FACS",[])
+    if (type(ff) is list) or (type(ff) is tuple):
+
+        for (i,fact) in enumerate(ff):
+            if i>=ntp:
+                raise ValueError("Error: header defines BRICK_FLOAT_FACS for nonexistant time point.")
+            if fact>0: # According to the AFNI specification, fact is non-negative
+                V[:,:,:,i] = fact*V[:,:,:,i]
+        
+    else: # If FLOAT_FACS is not a list, then simply apply it to all volumes
+        if ff>0:
+            V = fact*V
+
     
     return V
 
