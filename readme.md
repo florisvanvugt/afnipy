@@ -7,7 +7,7 @@ This is a quick-and-dirty module to read AFNI BRIK/HEAD files in Python. I did v
 
 Usage (assumes that you have `TT_N27+tlrc` AFNI BRIK/HEAD files sitting in the directory where you run this from):
 
-```
+```{python}
 import afni
 header,brik = afni.read('TT_N27+tlrc') # reads TT_N27+tlrc.{HEAD|BRIK}
 ```
