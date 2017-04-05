@@ -212,7 +212,7 @@ def read_brik(fname,header):
 
 
 
-def read_afni(fname):
+def read(fname):
     """ Read AFNI data file (BRIK/HEAD).
     
     Arguments

@@ -26,6 +26,15 @@ gunzip TT_N27+tlrc.BRIK.gz
 
 
 
+This has been tested with Python 3 but it should probably work under Python 2 as well.
+
+
+# Prerequisites
+
+* `numpy` (`pip install numpy`)
+
+
+
 
 ## TODO
 
