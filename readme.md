@@ -14,7 +14,7 @@ header,brik = afni.read('TT_N27+tlrc') # reads TT_N27+tlrc.{HEAD|BRIK}
 
 That's it!
 
-I also include an Jupyter notebook that shows how you can read AFNI data files and then work with it in Python. For that to work, you have to For example BRIK/HEAD files, go [here](https://afni.nimh.nih.gov/pub/dist/src/) and download!
+I also include an Jupyter notebook that shows how you can read AFNI data files and then work with it in Python. For that to work, you have to download example BRIK/HEAD files, for example from [here](https://afni.nimh.nih.gov/pub/dist/src/).
 
 Under Linux/Mac OS you can download these with `wget` (assuming that you have `wget` installed):
 
