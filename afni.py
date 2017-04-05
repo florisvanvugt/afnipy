@@ -137,7 +137,11 @@ def read_brik(fname,header):
     # different data types, which we are too lazy here to support.
     if (type(bt) is list) or (type(bt) is tuple):
         if len(bt)>1:
-            raise ValueError("Error: currently not supporting reading bricks with different data types.")
+            # If this is a list of data types but they are really all the same data type, then it's still okay.
+            if len(list(set(bt)))==1:
+                bt = bt[0]
+            else:
+                raise ValueError("Error: currently not supporting reading bricks with different data types.")
         else:
             bt = bt[0]
 
