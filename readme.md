@@ -30,3 +30,4 @@ gunzip TT_N27+tlrc.BRIK.gz
 ## TODO
 
 * Let Python read compressed (gzipped) `.BRIK` files.
+* Use scaling of values correctly (based on information from the header)
