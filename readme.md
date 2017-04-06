@@ -3,6 +3,8 @@
 
 This is a quick-and-dirty module to read AFNI BRIK/HEAD files in Python. I did very little testing, so please use with caution and if you find bugs, send me your suggested changes in exchange for my eternal gratitude!
 
+**Dedicated** to the fine folks who built AFNI and made it available for everyone!
+
 
 
 Usage (assumes that you have `TT_N27+tlrc` AFNI BRIK/HEAD files sitting in the directory where you run this from):
