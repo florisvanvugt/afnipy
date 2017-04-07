@@ -201,7 +201,7 @@ def read_brik(fname,header):
         
     else: # If FLOAT_FACS is not a list, then simply apply it to all volumes
         if ff>0:
-            V = fact*V
+            V = ff*V
 
     
     return V

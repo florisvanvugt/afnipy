@@ -33,7 +33,7 @@ This has been tested with Python 3 but it should probably work under Python 2 as
 
 # Prerequisites
 
-* `numpy` (`pip install numpy`)
+* `numpy` (to install it, run `pip install numpy`)
 
 
 
